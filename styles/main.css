@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+} 
+html, body{
+  margin: 0;
+  padding: 0;
+} 
+body{
+  font-family: 'Roboto', sans-serif;
+}
+nav{
+  background-color: #DDDDDD;
+  height:169.3vh;
+  text-align: center;
+  padding: 2rem;
+}
+#navHead {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.nav-item{
+  height: 6rem;
+  margin: 0.5rem;
+  padding: 1.6rem;
+  border-radius: 35px;
+}
+.nav-link{
+  font-size: 1.1rem;
+  color: #fff !important;
+}
+main{
+  background-color: #fff;
+}
+#alligator{
+  max-width: 40%;
+  height: auto;
+}
+/* grid container */
+.dashboard {
+  background-color: #DDDDDD;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: auto;
+}
+/* grid items */
+#logo {
+  grid-column: span 9;
+  padding: 2rem;
+  max-width: 100%;
+  display: block;
+}
+#virus1{
+  grid-column: span 1;
+  margin: .5rem;
+}
+#alachua{
+  grid-column: span 5;
+  margin: .5rem;
+  margin-bottom: auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 20px;
+}
+#florida{
+  grid-column: span 3;
+  margin: .5rem;
+  padding: 1rem;
+  height: auto;
+  background-color: #fff;
+  border-radius: 20px;
+}
+#colleges{
+  grid-column: span 6;
+  margin: .5rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 20px;
+}
+#mask{
+  grid-column: span 3;
+}
+footer{
+  grid-column: span 9;
+}
+/* end grid items */
+#Layer_1:hover{
+  opacity: 70%;
+}
+h2{
+  padding: 0;
+  margin: 0;
+}
+.byline{
+  font-size: 1rem;
+}
+figcaption{
+  color: #333333 !important;
+}
+.vertical {
+  width: 60%;
+}
+footer {
+  padding: 2rem;
+  max-width: 100%;
+  height: 12rem;
+  display: block;
+  text-align: left;
+}
+#alligatorfoot{
+    width: 20%;
+    height: auto;
+}
+.credits{
+    font-size: 1rem;
+}
+a:link{
+   color: #203354;
+   text-decoration: none;
+}
+a:visited{
+    color: #203354;
+    text-decoration: none;
+}
+a:hover{
+    color: #203354;
+    text-decoration: underline;
+}
+
+/* start media queries */
+@media screen and (max-width: 1000px){
+  #pageName{
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 991px){
+  .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  .navbar-collapse {
+    text-align: center;
+  }
+  #alligatorfoot{
+    width: 40%;
+  }
+}
+@media screen and (max-width: 767px){
+  #alligator{
+      max-width: 80%;
+  }
+  #pageName{
+    font-size: 2rem;
+  }
+  .vertical {
+    width: 90%;
+  }
+  .credits{
+      font-size: 0.75rem;
+  }
+}
+@media screen and (max-width: 550px){
+  #alligator{
+    max-width: 100%;
+  }
+  #alligatorfoot{
+    width: 80%;
+  }
+  /* grid items */
+#logo {
+  grid-column: span 9;
+}
+#virus1{
+  grid-column: span 3;
+  text-align: center;
+}
+#alachua{
+  grid-column: span 9;
+}
+#florida{
+  grid-column: span 9;
+}
+#colleges{
+  grid-column: span 9;
+}
+#mask{
+  grid-column: span 5;
+  text-align: center;
+}
+footer{
+  grid-column: span 9;
+}
+/* end grid items */
+
+}
