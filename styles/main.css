@@ -8,17 +8,42 @@ html, body{
 body{
   font-family: 'Roboto', sans-serif;
 }
-nav{
+.navbar {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1rem;
   background-color: #DDDDDD;
-  height:169.3vh;
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .1);
+}
+.navbar-toggler {
+  margin: 0.5rem
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  background-color: #DDDDDD;
   text-align: center;
-  padding: 2rem;
 }
 #navHead {
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
   font-size: 2rem;
+  color: #2D2E2F;
   text-transform: uppercase;
+}
+.sidebar-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 48px; /* Height of navbar */
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
 .nav-item{
   height: 6rem;
@@ -26,9 +51,13 @@ nav{
   padding: 1.6rem;
   border-radius: 35px;
 }
-.nav-link{
+.sidebar .nav-link {
   font-size: 1.1rem;
   color: #fff !important;
+}
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
 }
 main{
   background-color: #fff;
@@ -40,7 +69,7 @@ main{
 /* grid container */
 .dashboard {
   background-color: #DDDDDD;
-  padding: 0;
+  padding: 1rem;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: auto;
@@ -52,23 +81,27 @@ main{
   max-width: 100%;
   display: block;
 }
-#virus1{
-  grid-column: span 1;
-  margin: .5rem;
-}
-#alachua{
-  grid-column: span 5;
-  margin: .5rem;
-  margin-bottom: auto;
-  padding: 1rem;
-  background-color: #fff;
-  border-radius: 20px;
-}
 #florida{
-  grid-column: span 3;
+  grid-column: span 7;
   margin: .5rem;
   padding: 1rem;
   height: auto;
+  background-color: #fff;
+  border-radius: 20px;
+}
+#virus1{
+  grid-column: span 2;
+  margin: .5rem;
+}
+#virus2{
+  grid-column: span 2;
+  margin: .5rem;
+}
+#alachua{
+  grid-column: span 7;
+  margin: .5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
   background-color: #fff;
   border-radius: 20px;
 }
@@ -82,25 +115,44 @@ main{
 #mask{
   grid-column: span 3;
 }
+h1{
+  grid-column: span 9;
+  font-size: 1.5rem;
+  padding: .5rem;
+  justify-self: center;
+}
+#AlachuaInfo{
+  margin: .5rem;
+  grid-column: span 7;
+  padding-left: 15rem;
+}
+#vapeInfo{
+  margin: .5rem;
+  grid-column: span 7;
+  padding-left: 15rem;
+}
+#backInfo{ 
+  margin: .5rem;
+  grid-column: span 7;
+  padding-left: 15rem;
+}
+#spreadInfo{
+  margin: .5rem;
+  grid-column: span 7;
+  padding-left: 15rem;
+}
 footer{
   grid-column: span 9;
 }
 /* end grid items */
+#Layer_1{
+  height: 8rem;
+}
 #Layer_1:hover{
   opacity: 70%;
 }
-h2{
-  padding: 0;
-  margin: 0;
-}
-.byline{
-  font-size: 1rem;
-}
 figcaption{
   color: #333333 !important;
-}
-.vertical {
-  width: 60%;
 }
 footer {
   padding: 2rem;
@@ -130,20 +182,54 @@ a:hover{
 }
 
 /* start media queries */
-@media screen and (max-width: 1000px){
-  #pageName{
-    font-size: 3rem;
+@media screen and (max-width: 1250px){
+    /* grid items */
+  #logo {
+    grid-column: span 9;
   }
+  #virus1{
+    display: none;
+  }
+  #florida{
+    grid-column: span 9;
+  }
+  #virus2{
+    display: none;
+  }
+  #alachua{
+    grid-column: span 9;
+  }
+  #colleges{
+    grid-column: span 9;
+  }
+  #mask{
+    grid-column: span 5;
+  }
+  h1{
+    font-size: 1.2rem;
+  }
+  #AlachuaInfo{
+    grid-column: span 8;
+    padding-left: 0;
+  }
+  #vapeInfo{
+    grid-column: span 8;
+    padding-left: 0;
+  }
+  #backInfo{
+    grid-column: span 8;
+    padding-left: 0;
+  }
+  #spreadInfo{
+    grid-column: span 8;
+    padding-left: 0;
+  }
+  footer{
+    grid-column: span 9;
+  }
+  /* end grid items */
 }
 @media screen and (max-width: 991px){
-  .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
-  }
-  .navbar-collapse {
-    text-align: center;
-  }
   #alligatorfoot{
     width: 40%;
   }
@@ -169,30 +255,4 @@ a:hover{
   #alligatorfoot{
     width: 80%;
   }
-  /* grid items */
-#logo {
-  grid-column: span 9;
-}
-#virus1{
-  grid-column: span 3;
-  text-align: center;
-}
-#alachua{
-  grid-column: span 9;
-}
-#florida{
-  grid-column: span 9;
-}
-#colleges{
-  grid-column: span 9;
-}
-#mask{
-  grid-column: span 5;
-  text-align: center;
-}
-footer{
-  grid-column: span 9;
-}
-/* end grid items */
-
 }

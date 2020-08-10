@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>COVID-19</title>
+
+<!-- fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+<!-- styles -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- Tippy.js themes -->
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light-border.css" />
+  <!-- custom styles -->
+  <link rel="stylesheet" href="styles/main.css">
+
+<!-- scripts -->
+  <!-- JQuery & Bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- Tippy.js -->
+    <!-- Development -->
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <!-- Production -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+      <div class="row">
+
+        <nav id="navbarToggler" class="collapse navbar-collapse col-lg-3 d-lg-block sidebar">
+          <div class="sidebar-sticky">
+            <p id="navHead"><i>Stay up to date:</i></p>
+            <ul class="nav flex-column">
+              <li class="nav-item" style="background-color: #E64E4E;">
+                <a class="nav-link" href="index.html">
+                  Dashboard
+                </a>
+              </li>
+              <li class="nav-item" style="background-color: #D35E5E;">
+                <a class="nav-link" href="#">
+                  Infographics
+                </a>
+              </li>
+              <li class="nav-item" style="background-color: #E07070;">
+                <a class="nav-link" href="https://www.alligator.org/uf-reopening/collection_4f57ad38-c201-11ea-adde-ff1d0c0b2a9c.html" target="_blank">
+                  UF Reopening
+                </a>
+              </li>
+              <li class="nav-item" style="background-color: #D88080;">
+                <a class="nav-link" href="https://www.alligator.org/pandemic-in-alachua-county/collection_26d1deda-c204-11ea-a58d-7fb12c62d353.html" target="_blank">
+                  Pandemic in Alachua County
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="ml-sm-auto col-lg-9">
+
+          <nav class="navbar sticky-top navbar-light flex-md-nowrap p-0">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+
+          <div class="dashboard">
+
+            <div id="logo" class="text-center">
+              <a href="https://www.alligator.org/"><img id="alligator" src="images/alligator.png" alt="logo"></a>
+            </div>
+
+            <h1>Click the inforgraphics to read more COVID coverage from The Alligator.</h1>
+
+            <div id="AlachuaInfo" >
+                <figure class="infographic">
+                    <a href="https://www.alligator.org/covid-19/why-your-covid-19-test-results-may-be-delayed/article_7093220a-d2b1-11ea-9fc1-bbf2d44b45de.html" target="_blank">
+                    <img src="images/covidAlachua.png" class="img-fluid">
+                    </a>
+                    <figcaption class="figure-caption text-left">
+                        <cite>Carley Noll / Alligator Staff</cite>
+                </figure>
+            </div>
+
+            <div id="vapeInfo">
+                <figure class="infographic">
+                    <a href="https://www.alligator.org/covid-19/study-finds-college-e-cigarette-users-more-susceptible-to-covid-19/article_07e7001e-ceb5-11ea-9690-bf42ea69b60a.html" target="_blank">
+                    <img src="images/covidVaping.png" class="img-fluid">
+                    </a>
+                    <figcaption class="figure-caption text-left">
+                        <cite>Shannon Ahern / Alligator Staff</cite>
+                </figure>
+            </div>
+
+            <div id="backInfo">
+                <figure class="infographic">
+                    <a href="https://www.alligator.org/back-to-school-covid-19-tips/image_c79b12fc-cb76-11ea-9188-2bbfa61b29f4.html" target="_blank">
+                    <img src="images/backToSchool.png" class="img-fluid">
+                    </a>
+                    <figcaption class="figure-caption text-left">
+                        <cite>Shannon Ahern / Alligator Staff</cite>
+                </figure>
+            </div>
+
+            <div id="spreadInfo">
+                <figure class="infographic">
+                    <a href="https://www.alligator.org/covid-19/relief-grant-poe-springs-plans-inside-the-county-commission-s-covid-19-update/article_8dfc7928-c63f-11ea-a450-cfaf3129ae91.html" target="_blank">
+                    <img src="images/covidSpreads.jpg" class="img-fluid">
+                    </a>
+                    <figcaption class="figure-caption text-left">
+                        <cite>Kate McNamara / Alligator Staff</cite>
+                </figure>
+            </div>
+
+            <footer id="foot">
+              <a href="https://www.alligator.org/"><img id="alligatorfoot" src="images/alligator.png" alt="logo"></a>
+              <p class="credits pt-1">© Copyright 2020, <a href="https://www.alligator.org/">The Independent Florida Alligator</a></p>
+              <p id="artist" class="credits pt-1">Graphics by Carl Noll</p>
+              <p id= "dev" class="credits pb-1">Developed by Rosmery Izaguirre</p>
+            </footer>
+
+          </div>
+
+        </main>
+
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/tooltip.js"></script>
+    <script type="text/javascript" src="js/toggle.js"></script>
+
+</body>
+</html>
